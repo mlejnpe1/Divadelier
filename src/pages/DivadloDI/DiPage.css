@@ -1,0 +1,73 @@
+.about-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: rgba(1,1,1,0.5);
+  }
+  
+  .image {
+    width: calc(60% - 100px);
+    height: 500px;
+    padding: 0px 50px;
+    filter: brightness(50%);
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .banner-text>h1, .banner-text>p{
+    text-shadow: 0px 0px 2px #333;
+  }
+  
+  .history-today {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #f4f4f4;
+  }
+
+  .history, .today {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .team {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member, .team-member>a{
+    color: black;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .team-member b{
+    color: #dfa42e;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  
