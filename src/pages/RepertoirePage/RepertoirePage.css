@@ -32,6 +32,11 @@
     padding: 10px;
     border-bottom: 1px solid #e0e0e0;
   }
+
+  .subsection a{
+    text-decoration: none;
+    color: #dfa42e;
+  }
   
   .subsection:last-child {
     border-bottom: none;
