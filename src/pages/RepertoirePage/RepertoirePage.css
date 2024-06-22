@@ -1,0 +1,88 @@
+/* RepertoirePage.css */
+
+.repertoire-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .section.column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subsection {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .subsection:last-child {
+    border-bottom: none;
+  }
+  
+  .subsection img {
+    width: 33%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .subsection div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .subsection h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .subsection p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+/* Archive Styles */
+.archive {
+    margin-top: 20px;
+  }
+  
+  .archive h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .archive-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .archive-photos img {
+    width: calc(25% - 10px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }  

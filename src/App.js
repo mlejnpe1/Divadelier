@@ -11,6 +11,7 @@ import image4 from './assets/slideshow/4.jpg';
 import image5 from './assets/slideshow/5.jpg';
 import image6 from './assets/slideshow/6.jpg';
 import image7 from './assets/slideshow/7.jpg';
+import RepertoirePage from './pages/RepertoirePage/RepertoirePage';
 
 
 const App = () => {
@@ -31,7 +32,8 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<HomePage images={images}/>}/>
         <Route path='/contacts' element={<ContactPage/>}/>
-        <Route path='/DivadloDi' element={<DIPage/>}/>
+        <Route path='/divadloDi' element={<DIPage/>}/>
+        <Route path='/repertoire' element={<RepertoirePage/>}/>
       </Routes>
       </div>
     </Router>

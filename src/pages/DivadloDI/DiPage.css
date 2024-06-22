@@ -13,7 +13,7 @@
   }
   
   .image {
-    width: calc(60% - 100px);
+    width: calc(65% - 100px);
     height: 500px;
     padding: 0px 50px;
     filter: brightness(50%);
@@ -22,7 +22,7 @@
   .banner-text {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%;font-size: large;
     transform: translate(-50%, -50%);
   }
 
@@ -32,18 +32,20 @@
   
   .history-today {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    padding: 50px;
+    padding: 2% 20%;
     background-color: #f4f4f4;
   }
 
   .history, .today {
     flex: 1;
+    align-items: center;
+    text-align: center;
     margin: 0 20px;
   }
   
   .team {
-    text-align: center;
     padding: 50px;
   }
   

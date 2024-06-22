@@ -7,9 +7,9 @@
   }
   
   .contact-image img{
-    width: 75%;
+    width: 45%;
     max-height: 400px;
-    margin: 0px;
+    margin-top: 5%;
   }
   
   .contact-details {
