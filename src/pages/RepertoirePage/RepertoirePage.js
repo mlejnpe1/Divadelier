@@ -9,6 +9,7 @@ import Spolu from "../../assets/reprertoire/spolu.jpg";
 import { useState } from "react";
 import Modal from "react-modal";
 import ImageGallery from "react-image-gallery";
+import ScrollButton from "../../components/ScrollTopButton/ScrollButton";
 
 function RepertoirePage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -116,42 +117,34 @@ function RepertoirePage() {
             </div>
           </div>
         </div>
-
-        {/* Archive of Photos */}
-        <div className='archive'>
-          <h2>Photo Archive</h2>
-          <div className='archive-photos'>
-            {archiveImages.map((image, index) => (
-              <img
-                key={index}
-                src={image.thumbnail}
-                alt={`Archive Photo ${index + 1}`}
-                onClick={() => openModal(index)}
-              />
-            ))}
+        <div className='section'>
+          <h1>Archiv představení</h1>
+          <div className='subsection'>
+            <img src={Honza} alt='Description4' />
+            <div>
+              <h2>Jak honza ke šptěstí přišel</h2>
+              <p>
+                Něžná komedie o nehynoucí lásce v manželství propletená spoustou
+                slovních hříček. Chcete-li věřit na velkou lásku na celý život,
+                a přitom se i zasmát, pak je tu pro vás hra Spolu.
+              </p>
+            </div>
+          </div>
+          <div className='subsection'>
+            <img src={NaPavlaci} alt='Description5' />
+            <div>
+              <h2>Na Pavlači</h2>
+              <p>
+                Nahlédněte pod pokličku dvou žen před padesátkou a zjistěte, co
+                jim nejvíce leží na srdci - vrásky, špíčky, práce nebo muži? To
+                vše a mnohem více můžete shlédnout v komedii Na pavlači
+                provoněné kávou...
+              </p>
+            </div>
           </div>
         </div>
-
-        {/* Modal for Slideshow */}
-        <Modal
-          isOpen={isOpen}
-          onRequestClose={closeModal}
-          className='modal'
-          overlayClassName='overlay'
-        >
-          <ImageGallery
-            items={archiveImages}
-            startIndex={startIndex}
-            showThumbnails={false}
-            showFullscreenButton={false}
-            showPlayButton={false}
-            showNav={true} // Show navigation arrows
-          />
-          <button onClick={closeModal} className='close-button'>
-            Close
-          </button>
-        </Modal>
       </div>
+      <ScrollButton/>
     </>
   );
 }
