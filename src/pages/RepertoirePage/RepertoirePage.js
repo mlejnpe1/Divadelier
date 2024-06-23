@@ -61,7 +61,7 @@ function RepertoirePage() {
                 Srdečně Vás v lednu 2024 zveme na obnovenou premiéru pohádky O
                 Šípkové Růžence nově s hercem Adamem Horkým.
               </p>
-              <Link to={"/detailPage"}>Více informací o představení ▶</Link>
+              <Link to={"/ruzenkaDetailPage"}>Více informací o představení ▶</Link>
             </div>
           </div>
           <div className='subsection'>
@@ -72,7 +72,7 @@ function RepertoirePage() {
                 Srdečně Vás zveme ke shlédnutí veselé pohádky, která je vhodná
                 pro předškolní děti a děti prvního stupně.
               </p>
-              <Link to={"detailPage"}>Více informací o představení ▶</Link>
+              <Link to={"/honzaDetailPage"}>Více informací o představení ▶</Link>
             </div>
           </div>
           <div className='subsection'>
@@ -87,7 +87,7 @@ function RepertoirePage() {
                 A udělal všechno, aby osud zvrátil. Jenže osud je silnější
                 člověka. A máte-li něco v osudu, třeba...
               </p>
-              <Link to={"detailPage"}>Více informací o představení ▶</Link>
+              <Link to={"/plavacekDetailPage"}>Více informací o představení ▶</Link>
             </div>
           </div>
         </div>

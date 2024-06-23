@@ -12,7 +12,9 @@ import image5 from "./assets/slideshow/5.jpg";
 import image6 from "./assets/slideshow/6.jpg";
 import image7 from "./assets/slideshow/7.jpg";
 import RepertoirePage from "./pages/RepertoirePage/RepertoirePage";
-import DetailPage from "./pages/DetailPage/DetailPage";
+import RuzenkaDetailPage from "./pages/RuzenkaDetailPage/RuzenkaDetailPage";
+import HonzaDetailPage from "./pages/HonzaDetailPage/HonzaDetailPage";
+import PlavacekDetailPage from "./pages/PlavacekDetailPage/PlavacekDetailPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 const App = () => {
@@ -54,7 +56,9 @@ const App = () => {
           <Route exact path='contacts' element={<ContactPage />} />
           <Route exact path='divadloDi' element={<DIPage />} />
           <Route exact path='repertoar' element={<RepertoirePage />} />
-          <Route exact path='detailPage' element={<DetailPage />} />
+          <Route exact path='ruzenkaDetailPage' element={<RuzenkaDetailPage />} />
+          <Route exact path='honzaDetailPage' element={<HonzaDetailPage />} />
+          <Route exact path='plavacekDetailPage' element={<PlavacekDetailPage/>} />
           <Route path='*' component={<NotFoundPage/>} />
         </Routes>
       </div>

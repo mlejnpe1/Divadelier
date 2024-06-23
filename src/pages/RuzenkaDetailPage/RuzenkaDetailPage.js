@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import "./DetailPage.css";
+import "./RuzenkaDetailPage.css";
 import Title from "../../assets/ruzenka/title.webp";
 import Picture1 from "../../assets/ruzenka/1.webp";
 import Picture2 from "../../assets/ruzenka/2.webp";

@@ -25,11 +25,11 @@
     padding: 2%;
     justify-content: center;
     flex: 1;
-    background-color: #fff;
+    background-color: #e1f1fd;
   }
 
   .contact-section:nth-child(3){
-    background-color: #e8e8e8
+    background-color:  	#c1d8f0;
   }
 
   .map{
