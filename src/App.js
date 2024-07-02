@@ -12,53 +12,29 @@ import image5 from "./assets/slideshow/5.jpg";
 import image6 from "./assets/slideshow/6.jpg";
 import image7 from "./assets/slideshow/7.jpg";
 import RepertoirePage from "./pages/RepertoirePage/RepertoirePage";
-import RuzenkaDetailPage from "./pages/RuzenkaDetailPage/RuzenkaDetailPage";
-import HonzaDetailPage from "./pages/HonzaDetailPage/HonzaDetailPage";
-import PlavacekDetailPage from "./pages/PlavacekDetailPage/PlavacekDetailPage";
+import RuzenkaDetailPage from "./pages/DetailPages/RuzenkaDetailPage";
+import HonzaDetailPage from "./pages/DetailPages/HonzaDetailPage";
+import PlavacekDetailPage from "./pages/DetailPages/PlavacekDetailPage";
+import NaPavlaciDetailPage from "./pages/DetailPages/NaPavlaciDetailPage";
+import SpoluDetailPage from "./pages/DetailPages/SpoluDetailPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import EventsPage from "./pages/Events/EventsPage";
 
 const App = () => {
-  const images = [
-    {
-      url: image1,
-      title: "O ŠÍPKOVÉ RŮŽENCE",
-      subtitle: "ČINOHERNÍ HUMORNÁ POHÁDKA PRO DĚTI",
-    },
-    { url: image2, title: '"Dávám ti do vínku auto a vilu."' },
-    { url: image3, title: '"Tady máte ruku mou, budu Vaší Růženou."' },
-    {
-      url: image4,
-      title: "JAK HONZA KE ŠTĚSTÍ PŘIŠEL",
-      subtitle: "ČINOHERNÍ VESELÁ POHÁDKA PRO DĚTI",
-    },
-    {
-      url: image5,
-      title: '"Když mám hlad, tak zastavím, sednu si, krávu podojím."',
-    },
-    {
-      url: image6,
-      title: "SPOLU",
-      subtitle: "ČINOHERNÍ NĚŽNÁ KOMEDIE Z MANŽELSKÉHO ŽIVOTA",
-    },
-    {
-      url: image7,
-      title: '"Jako bublinka vodováhy?"',
-      subtitle: '"Základ rovnováhy."',
-    },
-  ];
-  //<Navbar/>
-  //<HomePage images={images} />
   return (
     <Router>
       <div className='App'>
         <Routes>
-          <Route exact path='/' element={<HomePage images={images} />} />
+          <Route exact path='/' element={<HomePage/>} />
           <Route exact path='contacts' element={<ContactPage />} />
           <Route exact path='divadloDi' element={<DIPage />} />
           <Route exact path='repertoar' element={<RepertoirePage />} />
           <Route exact path='ruzenkaDetailPage' element={<RuzenkaDetailPage />} />
           <Route exact path='honzaDetailPage' element={<HonzaDetailPage />} />
           <Route exact path='plavacekDetailPage' element={<PlavacekDetailPage/>} />
+          <Route exact path='naPavlaciDetailPage' element={<NaPavlaciDetailPage/>} />
+          <Route exact path='SpoluDetailPage' element={<SpoluDetailPage/>} />
+          <Route exact path='EventsPage' element={<EventsPage/>} />
           <Route path='*' component={<NotFoundPage/>} />
         </Routes>
       </div>

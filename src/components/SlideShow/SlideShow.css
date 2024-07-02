@@ -34,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     z-index: 3;
+    left: 0;
   }
   
   .arrow {
@@ -89,9 +90,12 @@
     width: 100%;
     text-align: left;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2%;
     font-size: 21px;
     z-index: 3;
   }
   
+  .slide-subtitle{
+    font-family: cursive;
+  }

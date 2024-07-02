@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-import Modal from "react-modal";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
-import "./PlavacekDetailPage.css";
+import React from "react";
+import "./DetailPages.css";
 import Title from "../../assets/plavacek/title.webp";
 import Picture1 from "../../assets/plavacek/1.webp";
 import Picture2 from "../../assets/plavacek/2.webp";
@@ -14,13 +11,9 @@ import Picture7 from "../../assets/plavacek/7.webp";
 import Picture8 from "../../assets/plavacek/8.webp";
 import Navbar from "../../components/NavBar/Navbar";
 import ScrollButton from "../../components/ScrollTopButton/ScrollButton";
-
-Modal.setAppElement("#root"); // Set root element for accessibility
+import ImageGalery from "../../components/ImageGalery/ImageGalery";
 
 const DetailPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [startIndex, setStartIndex] = useState(0);
-
   const images = [
     { original: Picture1, thumbnail: Picture1 },
     { original: Picture2, thumbnail: Picture2 },
@@ -32,19 +25,10 @@ const DetailPage = () => {
     { original: Picture8, thumbnail: Picture8 },
   ];
 
-  const openModal = (index) => {
-    setStartIndex(index);
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
   return (
     <>
       <Navbar />
-      <div className='detail-page'>
+      <div id="top" className='detail-page'>
         <div className='header'>
           <img src={Title} alt='Header' className='header-image' />
           <h1 className='header-title'>Plaváček</h1>
@@ -69,13 +53,15 @@ const DetailPage = () => {
               <strong>Scénografie a loutky:</strong> Monika Münsterová
             </div>
             <div className='info-item'>
-              <strong>Hudba:</strong> Šimon Martínek, člen hudební skupiny Perutě
+              <strong>Hudba:</strong> Šimon Martínek, člen hudební skupiny
+              Perutě
             </div>
             <div className='info-item'>
               <strong>Výtvarná realizace:</strong> Barbara Wacková
             </div>
             <div className='info-item'>
-              <strong>Technická realizace:</strong> Ladislav Plšek, Michal Veselý
+              <strong>Technická realizace:</strong> Ladislav Plšek, Michal
+              Veselý
             </div>
             <div className='info-item'>
               <strong>Hrají:</strong> Adéla Pellarová, Monika Münsterová
@@ -92,39 +78,7 @@ const DetailPage = () => {
             </div>
           </div>
         </div>
-        <div className='gallery-section'>
-          <h2>foto: Petra Šplíchalová</h2>
-          <div className='gallery-images'>
-            {images.map((image, index) => (
-              <img
-                key={index}
-                src={image.thumbnail}
-                alt={`Gallery Image ${index + 1}`}
-                onClick={() => openModal(index)}
-              />
-            ))}
-          </div>
-        </div>
-        <Modal
-          isOpen={isOpen}
-          onRequestClose={closeModal}
-          className='modal'
-          overlayClassName='overlay'
-        >
-          <div className='modal-content'>
-            <ImageGallery
-              items={images}
-              startIndex={startIndex}
-              showThumbnails={true}
-              showFullscreenButton={true}
-              showPlayButton={false}
-              showNav={true}
-            />
-            <button onClick={closeModal} className='close-button'>
-              X
-            </button>
-          </div>
-        </Modal>
+        <ImageGalery images={images} h2={"foto: Petra Šplíchalová"}/>
       </div>
       <ScrollButton />
     </>

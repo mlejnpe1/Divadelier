@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../../assets/logo.png';
-import { Link, NavLink } from 'react-router-dom';
+import logo from '../../assets/logos/verze1.png';
+import { Link} from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,23 +29,26 @@ const Navbar = () => {
         <div className="navbar-dropdown" onMouseEnter={() => toggleDropdown('about')} onMouseLeave={() => toggleDropdown('about')}>
         <Link to={"/DivadloDI"} className="navbar-link" onClick={() => toggleDropdown('about')}>Divadlo DI ▼</Link>
           <div className={`dropdown-menu ${dropdownOpen.about ? 'show' : ''}`}>
-          <Link to={"/DivadloDI"} onClick={() => window.location.replace("/DivadloDI/#di")} className="dropdown-item">DI</Link>
+          <Link to={"/DivadloDI"} className="dropdown-item">DI</Link>
           <Link to={"/DivadloDI"} onClick={() => window.location.replace("/DivadloDI/#team")} className="dropdown-item">Herci</Link>
-          <Link to={"/"} className="dropdown-item">Spolutvůrci</Link>
+          <Link to={"/DivadloDI"} onClick={() => window.location.replace("/DivadloDI/#co-creators")} className="dropdown-item">Spolutvůrci</Link>
           </div>
         </div>
         <div className="navbar-dropdown" onMouseEnter={() => toggleDropdown('services')} onMouseLeave={() => toggleDropdown('services')}>
         <Link to={"/repertoar"} className="navbar-link" onClick={() => toggleDropdown('services')}>Repertoár ▼</Link>
           <div className={`dropdown-menu ${dropdownOpen.services ? 'show' : ''}`}>
-          <Link to={"/repertoar/#forKids"} onClick={() => window.location.replace("/repertoar/#forKids")} className="dropdown-item">Pro děti</Link>
-          <Link to={"/repertoar/#forAdult"} onClick={() => window.location.replace("/repertoar/#forAdult")} className="dropdown-item">Pro dospělé</Link>
-          <Link to={"/repertoar/#archive"} onClick={() => window.location.replace("/repertoar/#archive")} className="dropdown-item">Archiv</Link>
+          <Link to={"/repertoar"} onClick={() => window.location.replace("/repertoar/#forKids")} className="dropdown-item">Pro děti</Link>
+          <Link to={"/repertoar"} onClick={() => window.location.replace("/repertoar/#forAdult")} className="dropdown-item">Pro dospělé</Link>
+          <Link to={"/repertoar"} onClick={() => window.location.replace("/repertoar/#archive")} className="dropdown-item">Archiv</Link>
           </div>
         </div>
-        <Link to={"/"} className="navbar-link">Program</Link>
+        <Link to={"/EventsPage"} className="navbar-link">Program</Link>
         <Link to={"/contacts"} className="navbar-link">Kontakt</Link>
-        <a href="https://www.instagram.com/divadelier?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="navbar-icon" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/divadlo_di/" className="navbar-icon ig" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/Divadelier" className="navbar-icon fb" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-facebook"></i>
         </a>
       </div>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleNavbar}>

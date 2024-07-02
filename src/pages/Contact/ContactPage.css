@@ -25,11 +25,11 @@
     padding: 2%;
     justify-content: center;
     flex: 1;
-    background-color: #e1f1fd;
+    background-color: white;
   }
 
   .contact-section:nth-child(3){
-    background-color:  	#c1d8f0;
+    background-color:  	#f4f4f4;
   }
 
   .map{
@@ -47,4 +47,20 @@
   iframe {
     border: none;
   }
+
+  .contact-ig {
+    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   
+  .contact-fb {
+    background: #1877F2;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .contact-section a{
+    text-decoration: none;
+    padding: 1%;
+  }
